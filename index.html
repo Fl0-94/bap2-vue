@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bap 2</title>
+  </head>
+  <body>
+    <form>
+      <h1 id="Titre">Ajouter une association</h1>
+      <div class="form-1">
+          <label for="inputEmail4">Identité des associations</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Identité des associations">
+      </div>
+        <div class="form-2">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+        </div>
+        <div class="form-img">
+          <img src="sport.png" alt="Sport" class="bouton-type" id="sport" onclick="selectButton(this)">
+          <img src="culture.png" alt="Culture" class="bouton-type" id="culture" onclick="selectButton(this)">
+          <img src="aides.png" alt="Aides" class="bouton-type" id="aides" onclick="selectButton(this)">
+          <img src="etude.png" alt="Études" class="bouton-type" id="etudes" onclick="selectButton(this)">
+        </div>
+  <div class="form">
+      <div class="form-3">
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Représentant-e</label>
+          <input type="password" class="form-control-1" id="inputPassword4" placeholder="Nom">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Contacts</label>
+          <input type="text" class="form-control-1" id="inputAddress" placeholder="Courriel">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Coordonnées</label>
+          <input type="text" class="form-control-1" id="Voie/Rue" placeholder="Voie/Rue">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control-1" id="Longitude" placeholder="Longitude">
+        </div>
+      </div>
+    <div class="form-4">
+      <div class="form-group col-md-6">
+        <input type="password" class="form-control-1" id="inputPassword4" placeholder="Prénom">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control-1" id="inputAddress2" placeholder="Téléphone">
+      </div>
+      <div class="form-group col-md-6">
+        <input type="text" class="form-control-1" id="Complément d'adresse" placeholder="Complément d'adresse">
+      </div>
+      <div class="form-group col-md-6">
+        <input type="text" class="form-control-1" id="Latitude" placeholder="Latitude">
+      </div>
+    </div>
+      <div class="form-5">
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control-1" id="Ville" placeholder="Ville">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control-1" id="Code postal" placeholder="Code postal">
+        </div>
+      </div>
+      <div>
+      <button type="submit" class="ajouter">Ajouter</button>
+      </div>
+    </form>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+  <script>
+function selectButton(button) {
+  var buttons = document.getElementsByClassName('bouton-type');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('selected');
+  }
+  button.classList.add('selected');
+}
+  </script>
+</html>
+
+<style>
+body {
+  background-color: #3B3D44;
+}
+
+.h1 {
+  color: white;
+  font-size: 40px;
+  font-family: Poppins;
+  font-weight: 600;
+  
+}
+
+.form-1{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Poppins;
+
+}
+.form-control {
+  background-color: #3B3D44;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  font-family: Poppins;
+}
+
+.form-control-1{
+  background-color: #3B3D44;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  font-family: Poppins;
+}
+
+.bouton-type {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.bouton-type.selected {
+  border: 2px solid #007bff;
+  border-radius: 50px;
+}
+
+label {
+  color: white;
+}
+
+.ajouter {
+  width: 70%; 
+  height: 100%;
+  text-align: center; 
+  color: white; 
+  font-size: 24px; 
+  font-family: Poppins; 
+  font-weight: 600; 
+  word-wrap: break-word;
+  background-color: #9F81A1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+
+
+}
+</style>
